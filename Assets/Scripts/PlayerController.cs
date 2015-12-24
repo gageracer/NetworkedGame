@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(PlayerMotor))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : NetworkBehaviour {
 
 	[SerializeField]
 	private float speed = 5f;
@@ -23,7 +24,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update(){
-	
+		if (!isLocalPlayer)
+			return;
 		//Calculate movement velocity as a 3d vector
 		float _xMov = Input.GetAxisRaw ("Horizontal");
 		float _zMov = Input.GetAxisRaw("Vertical");
