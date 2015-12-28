@@ -3,7 +3,8 @@ using UnityEngine.Networking;
 
 public class PlayerInteract : NetworkBehaviour {
 
-	private const string PLAYER_TAG = "Player" ;
+	private const string PLAYER_TAG = "Player";
+	private const string BUTTON_TAG = "Button";
 	[SerializeField]
 	private Camera cam;
 	[SerializeField]
@@ -29,8 +30,12 @@ public class PlayerInteract : NetworkBehaviour {
 
 		RaycastHit _hit;
 		if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, range, mask)) {
+			CmdPlayerHit(_hit.collider.name);
 			if(_hit.collider.tag == PLAYER_TAG){
-				CmdPlayerHit(_hit.collider.name);
+
+			}
+			if(_hit.collider.tag == BUTTON_TAG){
+				CmdButtonPushed(_hit.collider.gameObject);
 			}
 		}
 
@@ -39,7 +44,12 @@ public class PlayerInteract : NetworkBehaviour {
 	[Command]
 	void CmdPlayerHit(string _ID)
 	{
-		Debug.Log (_ID + "has been hit.");
+		Debug.Log (_ID + " has been hit.");
 
+	}
+	[Command]
+	void CmdButtonPushed(GameObject _button){
+
+		_button.GetComponent<Button> ().ButtonPushed();
 	}
 }
