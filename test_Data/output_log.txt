@@ -17,47 +17,51 @@ Loading C:\Users\Can\Documents\GitHub\NetworkedGame\test_Data\Managed\UnityEngin
 Platform assembly: C:\Users\Can\Documents\GitHub\NetworkedGame\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Can\Documents\GitHub\NetworkedGame\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Can\Documents\GitHub\NetworkedGame\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.187 seconds
+- Completed reload, in  0.189 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Can\Documents\GitHub\NetworkedGame\test_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 194c0 -> priority: 1 
-Button has been hit.
+  Thread -> id: 1e788 -> priority: 1 
+(0.0, 0.0, 0.0)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(8.0, 27.5, -1.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(8.0, 27.5, -1.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(8.0, 27.5, -1.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(6.6, 9.8, -1.2)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(8.0, 27.5, -1.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(0.0, 0.0, 0.0)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(6.6, 9.8, -1.2)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Button has been hit.
+(8.0, 27.5, -1.4)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+(8.0, 27.5, -1.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 

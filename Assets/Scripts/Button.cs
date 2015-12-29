@@ -7,7 +7,7 @@ public class Button : NetworkBehaviour {
 	private Vector3 _to;
 	private Vector3 _result;
 	private Vector3 velocity = Vector3.zero;
-	private bool _move = false;
+
 	private bool i = true;
 
 	[SerializeField]
@@ -15,8 +15,11 @@ public class Button : NetworkBehaviour {
 	[SerializeField]
 	GameObject otherDoor;
 	private Transform boss;
+
 	[SyncVar]
 	private int _cNum;
+	[SyncVar]
+	private bool _move = false;
 
 	// Use this for initialization
 	void Start () {
@@ -59,10 +62,6 @@ public class Button : NetworkBehaviour {
 				otherDoor.transform.GetChild(0).GetComponent<Button>()._cNum = 3;
 				_move = true;
 				otherDoor.transform.GetChild(0).GetComponent<Button>()._move = true;
-		//		otherDoor.transform.parent.position = _result;
-		//		_ofrom = otherDoor.transform.position;
-		//		_oto = new Vector3 (0f, 10f, 0f) + _ofrom;
-		//		otherDoor.transform.position = Vector3.MoveTowards(_ofrom,_oto,speed *Time.deltaTime);
 			}
 
 		} else if (_cNum == 2) {
@@ -73,10 +72,6 @@ public class Button : NetworkBehaviour {
 				otherDoor.transform.GetChild(0).GetComponent<Button>()._cNum = 3;
 				_move = true;
 				otherDoor.transform.GetChild(0).GetComponent<Button>()._move = true;
-		//		otherDoor.transform.parent.position = _result;
-		//		_ofrom = otherDoor.transform.position;
-		//		_oto = new Vector3 (0f, 10f, 0f) + _ofrom;
-		//		otherDoor.transform.position = Vector3.MoveTowards(_ofrom,_oto,speed *Time.deltaTime);
 
 			}
 		}

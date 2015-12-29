@@ -14,18 +14,30 @@ public class PlayerController : NetworkBehaviour {
 	private bool jumpControl = false;
 	[SerializeField]
 	private float heightCont = 1f;
+	[SerializeField]
+	private bool mouseLock;
 
 	private PlayerMotor motor;
 
 	void Start (){
 
 		motor = GetComponent<PlayerMotor> ();
-
+		mouseLock = true;
 	}
 
 	void Update(){
 		if (!isLocalPlayer)
 			return;
+		if (Input.GetKeyDown ("escape") && !mouseLock) {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+			mouseLock = true;
+		} else if (Input.GetKeyDown ("escape") && mouseLock) {
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+			mouseLock = false;
+		}
+
 		//Calculate movement velocity as a 3d vector
 		float _xMov = Input.GetAxisRaw ("Horizontal");
 		float _zMov = Input.GetAxisRaw("Vertical");
