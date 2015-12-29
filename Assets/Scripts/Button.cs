@@ -3,7 +3,8 @@ using UnityEngine.Networking;
 
 public class Button : NetworkBehaviour {
 
-	private Vector3 from = this.parent.transform.position;
+	private Vector3 _from = transform.parent.position;
+	private Vector3 _to = _from + Vector3 (0f, 10f, 0f); 
 	[SerializeField]
 	GameObject otherDoor;
 	[SyncVar]
