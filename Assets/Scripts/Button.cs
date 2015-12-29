@@ -11,7 +11,7 @@ public class Button : NetworkBehaviour {
 	private bool i = true;
 
 	[SerializeField]
-	private float speed = 10;
+	private float speed = 2f;
 	[SerializeField]
 	GameObject otherDoor;
 	private Transform boss;
