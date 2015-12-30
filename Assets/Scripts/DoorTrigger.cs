@@ -21,7 +21,7 @@ public class DoorTrigger : NetworkBehaviour {
 		if(_doorOpen == 1 && door1 != null)
 			door1.position =  Vector3.Lerp(door1.position,new Vector3(door1.position.x,-10,door1.position.z),Time.deltaTime * smooth);
 		if(_doorOpen == 2 && door1 != null)
-			door1.position =  Vector3.Lerp(door1.position,new Vector3(door1.position.x,1,door1.position.z) ,Time.deltaTime * smooth);
+			door1.position =  Vector3.Lerp(door1.position,new Vector3(door1.position.x,13,door1.position.z) ,Time.deltaTime * smooth);
 	}
 
 	void OnTriggerEnter(Collider other)

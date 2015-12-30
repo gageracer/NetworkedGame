@@ -38,7 +38,7 @@ public class MultipleDoorTrigger : NetworkBehaviour {
 		}
 		else if (_plat1.GetComponent<DoorTrigger> ()._doorOpen == 2 || _plat2.GetComponent<DoorTrigger> ()._doorOpen == 2 || _plat3.GetComponent<DoorTrigger> ()._doorOpen == 2) {
 
-			door3.position =  Vector3.Lerp(door3.position,new Vector3(door3.position.x,1,door3.position.z),Time.deltaTime * smooth);
+			door3.position =  Vector3.Lerp(door3.position,new Vector3(door3.position.x,13,door3.position.z),Time.deltaTime * smooth);
 			_megaDoor = false;
 		}
 	}
