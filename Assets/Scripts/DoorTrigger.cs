@@ -11,7 +11,7 @@ public class DoorTrigger : NetworkBehaviour {
 	[SerializeField]
 	private Transform door1;
 	// Use this for initialization
-	void Start () {
+	void Start() {
 
 	}
 	
@@ -24,17 +24,20 @@ public class DoorTrigger : NetworkBehaviour {
 			door1.position =  Vector3.Lerp(door1.position,new Vector3(door1.position.x,13,door1.position.z) ,Time.deltaTime * smooth);
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{		
 		if (other.gameObject.tag == "Cube" || other.gameObject.tag == "Player") 
+			if(_doorOpen != 1)
 			_doorOpen = 1;
 		
 	}
 	void OnTriggerExit(Collider other)
 	{		
 		if (other.gameObject.tag == "Cube" || other.gameObject.tag == "Player") {
-			_doorOpen = 2;
-			Debug.Log ("exit exit "+ other.gameObject.tag );
+			if(_doorOpen == 1)
+			{_doorOpen = 2;
+				Debug.Log ("exit exit "+ other.gameObject.tag );
+			}
 		}
 	}
 }
